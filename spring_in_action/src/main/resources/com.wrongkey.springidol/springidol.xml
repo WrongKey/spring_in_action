@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<start id="juggler_wrongkey">-->
+    <bean id="juggler_wrongkey" class="com.wrongkey.springidol.Juggler">
+        <constructor-arg name="name" value="wrongkey"/>
+        <constructor-arg name="beanBags" value="5"/>
+    </bean>
+    <!--<end id="juggler_wrongkey">-->
+
+</beans>

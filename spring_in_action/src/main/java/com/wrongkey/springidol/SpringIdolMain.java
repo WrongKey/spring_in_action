@@ -20,7 +20,7 @@ public class SpringIdolMain {
         performer.perform();
 
         PoeticJuggler poeticJuggler = (PoeticJuggler)ctx.getBean("poeticjuggler_wrongkey");
-        System.out.println("\n\n\npoeticjuggler_wrongkey开始表演了......");
+        System.out.println("\n\npoeticjuggler_wrongkey开始表演了......");
         poeticJuggler.perform();
     }
 }

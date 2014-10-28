@@ -8,8 +8,8 @@ package com.wrongkey.springidol;
  *
  */
 public class Juggler implements Performer{
-    private String name;
-    private int beanBags;
+    private String name;    //表演者姓名
+    private int beanBags;   //抛豆袋子的数量
 
     public Juggler(String name){
         this.name = name;
@@ -21,7 +21,7 @@ public class Juggler implements Performer{
     }
 
     @Override
-    public void perform() {
+    public void perform() throws PerformanceException{
         System.out.println(name+" juggling "+beanBags+" beanbags!");
     }
 }

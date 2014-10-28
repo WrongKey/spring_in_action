@@ -16,6 +16,11 @@ public class SpringIdolMain {
                 "com.wrongkey.springidol/springidol.xml");
 
         Performer performer = (Performer)ctx.getBean("juggler_wrongkey");
+        System.out.println("juggler_wrongkey 开始表演了......");
         performer.perform();
+
+        PoeticJuggler poeticJuggler = (PoeticJuggler)ctx.getBean("poeticjuggler_wrongkey");
+        System.out.println("\n\n\npoeticjuggler_wrongkey开始表演了......");
+        poeticJuggler.perform();
     }
 }

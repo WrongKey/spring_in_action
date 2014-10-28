@@ -10,4 +10,18 @@
     </bean>
     <!--<end id="juggler_wrongkey">-->
 
+    <!--<start id="sonnet29">-->
+    <bean id="sonnet29"
+            class="com.wrongkey.springidol.Sonnet29"/>
+    <!--<end id="sonnet29">-->
+
+    <!--<start id="poeticjuggler_wrongkey">-->
+    <bean id="poeticjuggler_wrongkey"
+            class="com.wrongkey.springidol.PoeticJuggler">
+        <constructor-arg name="name" value="wrongkey"/>
+        <constructor-arg name="beanBags" value="15"/>
+        <constructor-arg name="poem" ref="sonnet29"/>
+    </bean>
+    <!--<end id="poeticjuggler_wrongkey">-->
+
 </beans>

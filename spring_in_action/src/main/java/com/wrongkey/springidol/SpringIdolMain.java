@@ -34,5 +34,8 @@ public class SpringIdolMain {
         System.out.println("\ninstrumentalist_wrongkey开始表演了......");
         instrumentalist.perform();
 
+        Performer oneManBand = (Performer)ctx.getBean("onemanband_wrongkey");
+        System.out.println("\nonemanband_wrongkey开始表演了......");
+        oneManBand.perform();
     }
 }

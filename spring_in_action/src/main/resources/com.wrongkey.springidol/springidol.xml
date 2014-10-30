@@ -45,9 +45,7 @@
           class="com.wrongkey.springidol.Instrumentalist">
         <property name="name" value="instrumentalist_wrongkey"/>
         <property name="song" value="Jingle Bells"/>
-        <property name="instrument">
-            <bean class="com.wrongkey.springidol.Piano"/>
-        </property>
+        <property name="instrument" ref="piano"/>
     </bean>
     <!--<end id="instrumentalist_wrongkey">-->
 
@@ -57,7 +55,26 @@
     <!--<end id="saxophone">-->
 
     <!--<start id="piano">-->
-    <!--<bean id="piano"
-          class="com.wrongkey.springidol.Piano"/>-->
+    <bean id="piano"
+          class="com.wrongkey.springidol.Piano"/>
     <!--<end id="piano">-->
+
+    <!--<start id="guitar">-->
+    <bean id="guitar"
+          class="com.wrongkey.springidol.Guitar"/>
+    <!--<end id="guitar">-->
+
+    <!--<start id="onemanband_wrongkey">-->
+    <bean id="onemanband_wrongkey"
+          class="com.wrongkey.springidol.OneManBand">
+        <property name="instruments">
+            <list>
+                <ref bean="saxophone" />
+                <ref bean="guitar" />
+                <ref bean="piano" />
+            </list>
+        </property>
+    </bean>
+    <!--<end id="onemanband_wrongkey">-->
+
 </beans>

@@ -15,17 +15,24 @@ public class SpringIdolMain {
         ApplicationContext ctx = new ClassPathXmlApplicationContext(
                 "com.wrongkey.springidol/springidol.xml");
 
-        System.out.println("舞台开始准备......");
+        /*System.out.println("礼堂准备......");
+        Auditorium auditorium = (Auditorium)ctx.getBean("auditorium");*/
 
+        System.out.println("\n舞台开始准备......");
         Stage stage = (Stage)ctx.getBean("stage");
-        System.out.println("舞台准备完毕......");
+        System.out.println("\n舞台准备完毕......");
 
         Performer performer = (Performer)ctx.getBean("juggler_wrongkey");
-        System.out.println("juggler_wrongkey 开始表演了......");
+        System.out.println("\njuggler_wrongkey 开始表演了......");
         performer.perform();
 
         PoeticJuggler poeticJuggler = (PoeticJuggler)ctx.getBean("poeticjuggler_wrongkey");
-        System.out.println("\n\npoeticjuggler_wrongkey开始表演了......");
+        System.out.println("\npoeticjuggler_wrongkey开始表演了......");
         poeticJuggler.perform();
+
+        Performer instrumentalist = (Performer)ctx.getBean("instrumentalist_wrongkey");
+        System.out.println("\ninstrumentalist_wrongkey开始表演了......");
+        instrumentalist.perform();
+
     }
 }

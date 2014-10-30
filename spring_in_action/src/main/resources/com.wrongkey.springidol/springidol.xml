@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-init-method="turnOnLights"
+        default-destroy-method="turnOffLights">
 
     <!--<start id="juggler_wrongkey">-->
     <bean id="juggler_wrongkey" class="com.wrongkey.springidol.Juggler">
@@ -30,4 +33,31 @@
           factory-method="getInstance" />
     <!--<end id="stage">-->
 
+    <!--<start id="auditorium">-->
+    <bean id="auditorium"
+          class="com.wrongkey.springidol.Auditorium"/>
+          <!--init-method="turnOnLights"
+          destroy-method="turnOffLights" -->
+    <!--<end id="auditorium">-->
+
+    <!--<start id="instrumentalist_wrongkey">-->
+    <bean id="instrumentalist_wrongkey"
+          class="com.wrongkey.springidol.Instrumentalist">
+        <property name="name" value="instrumentalist_wrongkey"/>
+        <property name="song" value="Jingle Bells"/>
+        <property name="instrument">
+            <bean class="com.wrongkey.springidol.Piano"/>
+        </property>
+    </bean>
+    <!--<end id="instrumentalist_wrongkey">-->
+
+    <!--<start id="saxophone">-->
+    <bean id="saxophone"
+          class="com.wrongkey.springidol.Saxophone"/>
+    <!--<end id="saxophone">-->
+
+    <!--<start id="piano">-->
+    <!--<bean id="piano"
+          class="com.wrongkey.springidol.Piano"/>-->
+    <!--<end id="piano">-->
 </beans>

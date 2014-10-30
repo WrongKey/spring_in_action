@@ -24,4 +24,10 @@
     </bean>
     <!--<end id="poeticjuggler_wrongkey">-->
 
+    <!--<start id="stage">-->
+    <bean id="stage"
+          class="com.wrongkey.springidol.Stage"
+          factory-method="getInstance" />
+    <!--<end id="stage">-->
+
 </beans>

@@ -77,4 +77,17 @@
     </bean>
     <!--<end id="onemanband_wrongkey">-->
 
+    <!--<start id="onemanband2_wrongkey">-->
+    <bean id="onemanband2_wrongkey"
+          class="com.wrongkey.springidol.OneManBand2">
+        <property name="instruments">
+            <map>
+                <entry key="GUITAR" value-ref="guitar" />
+                <entry key="PIANO" value-ref="piano" />
+                <entry key="SAXOPHONE" value-ref="saxophone" />
+            </map>
+        </property>
+    </bean>
+    <!--<end id="onemanband2_wrongkey">-->
+
 </beans>
